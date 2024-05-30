@@ -47,15 +47,13 @@ async function checkWeather(city) {
   }
 }
 
-searchBtn.addEventListener('submit', () => {
+searchBtn.addEventListener('click', () => {
   checkWeather(inputBox.value);
 });
-searchBtn.addEventListener('keypress', () => {
+
+// Add keypress listener to input box
+inputBox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
-  checkWeather(inputBox.value);
+    checkWeather(inputBox.value);
   }
 });
-
-
-
-
